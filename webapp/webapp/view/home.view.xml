@@ -1,0 +1,67 @@
+<mvc:View controllerName="sap.cp.webapp.controller.home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:f="sap.f">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page"  title="{i18n>title}">
+                    
+					<content>
+                    
+                    <ObjectHeader title="Luis Díaz" >
+                    <ObjectAttribute text="Fecha: 03/09/2020"></ObjectAttribute>
+                    </ObjectHeader>
+                    		
+                    <f:GridList>
+		                <f:customLayout>
+			                <grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+		                </f:customLayout>
+
+		                <f:GridListItem>
+			 <VBox height="100%">
+				
+				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
+					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000223186_sd.jpg" width="3rem" class="sapUiSmallMarginEnd" />
+					<VBox>
+						<Title text="Apple - iPad 7 + Celular 32 GB - Oro" wrapping="true" />
+						<Label text="Compra de Equipo" wrapping="true" />
+                        <Label text="Precio: $12,000" wrapping="true" />
+                        <Label text="Prioridad ALTA" wrapping="true" />
+					</VBox>
+				</HBox>
+			</VBox>
+		</f:GridListItem>
+	</f:GridList>
+
+     <f:GridList>
+		                <f:customLayout>
+			                <grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+		                </f:customLayout>
+
+		                <f:GridListItem>
+			 <VBox height="100%">
+				
+				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
+					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000226986_sa.jpg" width="3rem" class="sapUiSmallMarginEnd" />
+					<VBox>
+						<Title text="Lenovo - Laptop IdeaPad S340 R5 de 15.6- Ryzen 5- Radeon Vega 8 - Memoria 8GB - Disco duro 1TB+SSD 128GB- Azul Profundo" wrapping="true" />
+						<Label text="Compra de Equipo" wrapping="true" />
+                        <Label text="Precio: $12,000" wrapping="true" />
+                        <Label text="Prioridad ALTA" wrapping="true" />
+					</VBox>
+				</HBox>
+			</VBox>
+		</f:GridListItem>
+	</f:GridList>
+                    
+                    </content>
+                <footer>
+                <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button type="Reject" press="onPress" text="rechazar" />
+                <Button type="Reject" press="onPress" text="rechazar" /></OverflowToolbar>
+                </footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
