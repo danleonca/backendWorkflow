@@ -8,16 +8,16 @@
 					<content>
                     
                     <ObjectHeader title="Luis Díaz" >
-                    <ObjectAttribute text="Fecha: 03/09/2020"></ObjectAttribute>
+                        <ObjectAttribute text="Fecha: 03/09/2020"></ObjectAttribute>
                     </ObjectHeader>
                     		
-                    <f:GridList>
-		                <f:customLayout>
-			                <grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
-		                </f:customLayout>
+<f:GridList>
+<f:customLayout>
+		<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+</f:customLayout>
 
-		                <f:GridListItem>
-			 <VBox height="100%">
+	<f:GridListItem>
+			 <VBox class="shadow" height="100%">
 				
 				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
 					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000223186_sd.jpg" width="3rem" class="sapUiSmallMarginEnd" />
@@ -38,7 +38,7 @@
 		                </f:customLayout>
 
 		                <f:GridListItem>
-			 <VBox height="100%">
+			 <VBox class="shadow" height="100%">
 				
 				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
 					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000226986_sa.jpg" width="3rem" class="sapUiSmallMarginEnd" />
@@ -52,13 +52,15 @@
 			</VBox>
 		</f:GridListItem>
 	</f:GridList>
-                    
+                   
                     </content>
                 <footer>
-                <OverflowToolbar>
-                <ToolbarSpacer />
-                <Button type="Reject" press="onPress" text="rechazar" />
-                <Button type="Reject" press="onPress" text="rechazar" /></OverflowToolbar>
+                    <OverflowToolbar>
+                     <ToolbarSpacer />
+                        <Button type="Default" press="onPress" text="Rechazar" />
+                        <Button type="Default" press="onPress" text="Aceptar" class="acept-btn"/>
+                            
+                    </OverflowToolbar>
                 </footer>
 				</Page>
 			</pages>
