@@ -7,10 +7,13 @@ modules:
   path: appfe-approuter
   requires:
   - name: appFE_html_repo_runtime
+  - name: uaa_appFE
+  - name: workflow_mta
   - name: dest_appFE
+  - name: portal_resources_FEsap
   parameters:
-    disk-quota: 256M
-    memory: 256M
+    disk-quota: 512M
+    memory: 512M
 - name: appFE_ui_deployer
   type: com.sap.application.content
   path: .
@@ -33,7 +36,29 @@ modules:
     commands:
     - npm run build
     supported-platforms: []
+- name: flp
+  type: com.sap.portal.content
+  path: flp
+  requires:
+  - name: workflow_mta
+  - name: portal_resources_FEsap
+  - name: uaa_appFE
+  parameters:
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack/releases/download/v1.6.51/nodejs-buildpack-cflinuxfs3-v1.6.51.zip
+    memory: 128M
+    stack: cflinuxfs3
 resources:
+- name: workflow_mta
+  parameters:
+    service-plan: lite
+    service: workflow
+  type: org.cloudfoundry.existing-service
+- name: uaa_appFE
+  parameters:
+    path: ./xs-security.json
+    service-plan: application
+    service: xsuaa
+  type: org.cloudfoundry.managed-service
 - name: appFE_html_repo_runtime
   type: org.cloudfoundry.managed-service
   parameters:
@@ -49,6 +74,11 @@ resources:
   parameters:
     service: destination
     service-plan: lite
+- name: portal_resources_FEsap
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: portal
+    service-plan: standard
 build-parameters:
   before-all:
   - builder: custom

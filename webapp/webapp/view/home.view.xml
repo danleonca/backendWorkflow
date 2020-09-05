@@ -1,16 +1,20 @@
 <mvc:View controllerName="sap.cp.webapp.controller.home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:grid="sap.ui.layout.cssgrid"
 	xmlns:f="sap.f">
-	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page"  title="{i18n>title}">
+				<Page id="page" >
                     
 					<content>
                     
-                    <ObjectHeader title="Luis Díaz" >
-                        <ObjectAttribute text="Fecha: 03/09/2020"></ObjectAttribute>
+                    <ObjectHeader title="{/task/Title}" >
+                        <ObjectAttribute title="{/task/CreatedBy}"></ObjectAttribute>
+                        <ObjectAttribute text="{/task/CreatedOn}" title="Fecha"></ObjectAttribute>
+                        <ObjectAttribute text="{/task/Description}" title="Descripción"></ObjectAttribute>
+                            <statuses>
+                                <ObjectStatus text= "{/task/Status}" state="None" ></ObjectStatus>
+                                <ObjectStatus text= "{/task/Priority}" state="{/task/PriorityState}" ></ObjectStatus>
+                            </statuses>
                     </ObjectHeader>
-                    		
 <f:GridList>
 <f:customLayout>
 		<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
@@ -54,16 +58,8 @@
 	</f:GridList>
                    
                     </content>
-                <footer>
-                    <OverflowToolbar>
-                     <ToolbarSpacer />
-                        <Button type="Default" press="onPress" text="Rechazar" />
-                        <Button type="Default" press="onPress" text="Aceptar" class="acept-btn"/>
-                            
-                    </OverflowToolbar>
-                </footer>
+               
 				</Page>
 			</pages>
 		</App>
-	</Shell>
 </mvc:View>

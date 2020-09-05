@@ -111,7 +111,8 @@
           "transition": "slide",
           "clearControlAggregation": false,
           "viewId": "home",
-          "viewName": "home"
+          "viewName": "home",
+          "controlAggregation": "midColumnPages"
         }
       }
     }
