@@ -1,0 +1,32 @@
+{
+    "id": "testform",
+    "schemaVersion": "1.0.0",
+    "name": "TestForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "producto",
+            "type": "string",
+            "label": "Producto",
+            "readOnly": false,
+            "value": "${context.product}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "aprobar",
+            "text": "aprobar",
+            "decisionType": "positive"
+        },
+        {
+            "id": "rechazar",
+            "text": "rechazar",
+            "decisionType": "negative"
+        }
+    ]
+}
