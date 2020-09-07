@@ -15,47 +15,31 @@
                                 <ObjectStatus text= "{/task/Priority}" state="{/task/PriorityState}" ></ObjectStatus>
                             </statuses>
                     </ObjectHeader>
-<f:GridList>
+<f:GridList
+id="gridList"
+    items="{path:'/items'}"
+    class="sapUiResponsiveContentPadding">
 <f:customLayout>
-		<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+		<grid:GridBasicLayout gridTemplateColumns="repeat(1, minmax(16rem, 1fr))" gridGap="0.5rem" />
 </f:customLayout>
 
-	<f:GridListItem>
+	<f:GridListItem highlight="Information">
 			 <VBox class="shadow" height="100%">
 				
 				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
-					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000223186_sd.jpg" width="3rem" class="sapUiSmallMarginEnd" />
+					<Image src="{image}" width="3rem" class="sapUiSmallMarginEnd" />
 					<VBox>
-						<Title text="Apple - iPad 7 + Celular 32 GB - Oro" wrapping="true" />
-						<Label text="Compra de Equipo" wrapping="true" />
-                        <Label text="Precio: $12,000" wrapping="true" />
-                        <Label text="Prioridad ALTA" wrapping="true" />
+						<Title text="{name}" wrapping="true" />
+						<Label text="{request}" wrapping="true" />
+                        <Label text="{price}" wrapping="true" />
+                        <Label text="{priority}" wrapping="true" />
 					</VBox>
 				</HBox>
 			</VBox>
 		</f:GridListItem>
 	</f:GridList>
 
-     <f:GridList>
-		                <f:customLayout>
-			                <grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
-		                </f:customLayout>
-
-		                <f:GridListItem>
-			 <VBox class="shadow" height="100%">
-				
-				<HBox height="100%" class="sapUiSmallMargin" alignItems="Center" visible="{= ${onlyImage} ? false : true }">
-					<Image src="https://pisces.bbystatic.com/image2/BestBuy_MX/images/products/1000/1000226986_sa.jpg" width="3rem" class="sapUiSmallMarginEnd" />
-					<VBox>
-						<Title text="Lenovo - Laptop IdeaPad S340 R5 de 15.6- Ryzen 5- Radeon Vega 8 - Memoria 8GB - Disco duro 1TB+SSD 128GB- Azul Profundo" wrapping="true" />
-						<Label text="Compra de Equipo" wrapping="true" />
-                        <Label text="Precio: $12,000" wrapping="true" />
-                        <Label text="Prioridad ALTA" wrapping="true" />
-					</VBox>
-				</HBox>
-			</VBox>
-		</f:GridListItem>
-	</f:GridList>
+     
                    
                     </content>
                
