@@ -1,0 +1,6 @@
+---
+applications:
+- name: triggerBack
+  random-route: true
+  path: triggerBack
+  memory: 128M
