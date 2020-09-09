@@ -15,9 +15,10 @@
 		imageShape="Circle"
 		responsive="true"
 		title="{/users/userName}"
-		intro="Departamento: {/users/deparment}"
+		intro="Departamento: {/users/department}"
 		 >
-			<ObjectAttribute text="{/task/CreatedBy}"  />
+			<ObjectAttribute text="{/users/userName}"  />
+            <ObjectAttribute text="{/users/email}"  />
 			<ObjectAttribute text="{/task/CreatedOn}"  />
 			<ObjectAttribute text="{/task/Description}" />
 	</ObjectHeader>
@@ -37,8 +38,9 @@ id="gridList"
 					<Image src="{image}" width="3rem" class="sapUiSmallMarginEnd" />
 					<VBox>
 						<Title text="{name}" wrapping="true" />
-                        <Title text="{price}" wrapping="true" />
-                        <Title text="{priority}" wrapping="true" />
+                        <Label text="Precio: {price}" wrapping="true" />
+                      	
+                        
 					</VBox>
 				</HBox>
 			</VBox>

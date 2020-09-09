@@ -25,7 +25,7 @@ sap.ui.define([
             } if (name === "Ricardo Rosales") {
                 sReturn = "/sapcpwebapp/images/imgH2.jpeg";
             } if (name === "Octavio Lujan") {
-                sReturn = "/sapcpwebapp/images/imgH3.jpeg";
+                sReturn = "/sapcpwebapp/images/imgH3.jpg";
             }
 
             // return sReturn to the view
