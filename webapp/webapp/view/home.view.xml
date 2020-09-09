@@ -9,13 +9,13 @@
                     	<ObjectHeader
                         
                         
-		icon="{path: '/context/users/userName', formatter: '.formatter.picture'}"
+		icon="{path: '/users/userName', formatter: '.formatter.picture'}"
 		iconDensityAware="false"
-		iconAlt="{/context/users/userName}"
+		iconAlt="{/users/userName}"
 		imageShape="Circle"
 		responsive="true"
-		title="{/context/users/userName}"
-		intro="Departamento: {/context/users/deparment}"
+		title="{/users/userName}"
+		intro="Departamento: {/users/deparment}"
 		 >
 			<ObjectAttribute text="{/task/CreatedBy}"  />
 			<ObjectAttribute text="{/task/CreatedOn}"  />

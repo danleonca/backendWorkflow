@@ -15,17 +15,17 @@ sap.ui.define([
             var sReturn = "";
 
             if (name === "Monica Carmona") {
-                sReturn = "sap/cp/webapp/images/imgM1.jpeg"
+                sReturn = "/sapcpwebapp/images/imgM1.jpeg"
             } if (name === "Rebeca Cabrera") {
-                sReturn = "sap/cp/webapp/images/imgM2.jpeg";
+                sReturn = "/sapcpwebapp/images/imgM2.jpeg";
             } if (name === "Alejandra Luna") {
-                sReturn = "sap/cp/webapp/images/imgM3.jpeg";
+                sReturn = "/sapcpwebapp/images/imgM3.jpeg";
             } if (name === "Pedro Medina") {
-                sReturn = "sap/cp/webapp/images/imgH1.jpeg"
+                sReturn = "/sapcpwebapp/images/imgH1.jpeg"
             } if (name === "Ricardo Rosales") {
-                sReturn = "sap/cp/webapp/images/imgH2.jpeg";
+                sReturn = "/sapcpwebapp/images/imgH2.jpeg";
             } if (name === "Octavio Lujan") {
-                sReturn = "sap/cp/webapp/images/imgH3.jpeg";
+                sReturn = "/sapcpwebapp/images/imgH3.jpeg";
             }
 
             // return sReturn to the view
