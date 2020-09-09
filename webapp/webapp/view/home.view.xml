@@ -9,14 +9,14 @@
                     	<ObjectHeader
                         
                         
-		icon="{imageModel>/path}/images/imgH1.jpeg"
+		icon="{path: '/context/users/userName', formatter: '.formatter.picture'}"
 		iconDensityAware="false"
 		iconAlt="{/context/users/userName}"
 		imageShape="Circle"
 		responsive="true"
-		title="{'/context/users/userName'}"
-		intro="Senior Developer"
-		class="sapUiResponsivePadding--header" >
+		title="{/context/users/userName}"
+		intro="Departamento: {/context/users/deparment}"
+		 >
 			<ObjectAttribute text="{/task/CreatedBy}"  />
 			<ObjectAttribute text="{/task/CreatedOn}"  />
 			<ObjectAttribute text="{/task/Description}" />
