@@ -24,7 +24,12 @@ sap.ui.define([
 			this.getRouter().initialize();
 
 			// set the device model
-            this.setModel(models.createDeviceModel(), "device");
+           this.setModel(models.createDeviceModel(), "device");
+            var oRoute = jQuery.sap.getModulePath("sap.cp.webapp");
+            var oImage = new sap.ui.model.json.JSONModel({
+                path: oRoute
+            });
+            this.setModel(oImage, "imageModel");
             var startupParameters = this.getComponentData().startupParameters;
             var taskModel = startupParameters.taskModel;
             var taskData = taskModel.getData();
@@ -128,6 +133,6 @@ sap.ui.define([
 
         _refreshTask: function (taskId) {
             this.getComponentData().startupParameters.inboxAPI.updateTask("NA", taskId);
-        }
+       }
 	});
 });

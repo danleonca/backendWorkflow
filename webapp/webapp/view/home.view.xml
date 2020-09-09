@@ -6,15 +6,22 @@
                     
 					<content>
                     
-                    <ObjectHeader title="{/task/Title}" >
-                        <ObjectAttribute title="{/task/CreatedBy}"></ObjectAttribute>
-                        <ObjectAttribute text="{/task/CreatedOn}" title="Fecha"></ObjectAttribute>
-                        <ObjectAttribute text="{/task/Description}" title="Descripción"></ObjectAttribute>
-                            <statuses>
-                                <ObjectStatus text= "{/task/Status}" state="None" ></ObjectStatus>
-                                <ObjectStatus text= "{/task/Priority}" state="{/task/PriorityState}" ></ObjectStatus>
-                            </statuses>
-                    </ObjectHeader>
+                    	<ObjectHeader
+                        
+                        
+		icon="{imageModel>/path}/images/imgH1.jpeg"
+		iconDensityAware="false"
+		iconAlt="{/context/users/userName}"
+		imageShape="Circle"
+		responsive="true"
+		title="{'/context/users/userName'}"
+		intro="Senior Developer"
+		class="sapUiResponsivePadding--header" >
+			<ObjectAttribute text="{/task/CreatedBy}"  />
+			<ObjectAttribute text="{/task/CreatedOn}"  />
+			<ObjectAttribute text="{/task/Description}" />
+	</ObjectHeader>
+        
 <f:GridList
 id="gridList"
     items="{path:'/items'}"
@@ -30,14 +37,13 @@ id="gridList"
 					<Image src="{image}" width="3rem" class="sapUiSmallMarginEnd" />
 					<VBox>
 						<Title text="{name}" wrapping="true" />
-						<Label text="{request}" wrapping="true" />
-                        <Label text="{price}" wrapping="true" />
-                        <Label text="{priority}" wrapping="true" />
+                        <Title text="{price}" wrapping="true" />
+                        <Title text="{priority}" wrapping="true" />
 					</VBox>
 				</HBox>
 			</VBox>
 		</f:GridListItem>
-	</f:GridList>
+	</f:GridList> 
 
      
                    
