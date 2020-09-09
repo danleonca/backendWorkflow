@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+        body{
+        background: #F0E9E9;
+        }
+        img{
+            width:10%;
+            margin:5%;
+        }
+        
+        .log img{
+            width: 76px;
+        }
+
+        .contact img{
+            width: 53px;
+            
+        }
+  
+    </style>
+</head>
+<body>
+
+    <div class="log" style=" position:absolute; width:100%; top:0; left:0; height: 150px; background: #344A5D; z-index:-1;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png">
+    </div>
+      
+    <div class="all" style=" position:absolute; width:100%;">
+        <div class="cont" style=" margin-left:15%;  width:70%; align-items:center; background: #FFFFFF; padding:5%; margin-top:80px;  ">
+            <h4>${context.sType}</h4>
+            <p> Tienes una nueva solicitud de ${context.users.userName} para ${context.sType} del siguiente equipo<p>
+            <div class="orders" style=" display:flex; flex-wrap:wrap; align-items:center; margin-top:0px; margin-bottom:0px;">
+                <img src="${context.items[0].image}">
+                <div class="text" style="width: 80%;"><p>${context.items[0].name}</p></div>
+            </div>
+            <a class="btn" href="https://c9de1e9btrial-dev-appfe-approuter.cfapps.us10.hana.ondemand.com/cp.portal/site#WorkflowTask-DisplayMyInbox?sap-ui-app-id-hint=cross.fnd.fiori.inbox" style="background: #03AEEB; padding:2%; margin-left:40%; width:20%; border-radius: 5px; margin-top:8%; border:0; height: 41px; letter-spacing: 0.05em; color: #FFFFFF;" >Ir a detalles</a>
+        </div>
+        <div class="contact" style="background-color: #FFFFFF; width:70%; margin-left:15%; margin-top:2%; margin-bottom: 20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1200px-SAP_2011_logo.svg.png">
+            <div class="icons" style="width:80%; margin-left:10%; display:flex; justify-content:space-between; font-size:28px; color:#99A4AE; padding:2%;">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-medium-m"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>  
+        </div>
+    </div>
+
+    
+</body>
+</html>

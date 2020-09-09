@@ -4,6 +4,27 @@
 			"classDefinition": "com.sap.bpm.wfs.Model",
 			"id": "testWorkflow",
 			"subject": "testWorkflow",
+			"customAttributes": [{
+				"id": "CustomNumberValue",
+				"label": "Items",
+				"type": "string",
+				"value": "1"
+			}, {
+				"id": "CustomTaskTitle",
+				"label": "Name",
+				"type": "string",
+				"value": "${context.users.userName}"
+			}, {
+				"id": "CustomCreatedBy",
+				"label": "Email",
+				"type": "string",
+				"value": "${context.users.email}"
+			}, {
+				"id": "CustomNumberUnitValue",
+				"label": "Item",
+				"type": "string",
+				"value": "Items"
+			}],
 			"name": "testWorkflow",
 			"documentation": "",
 			"lastIds": "62d7f4ed-4063-4c44-af8b-39050bd44926",
@@ -125,6 +146,27 @@
 			"userInterface": "sapui5://sapcpwebapp/sap.cp.webapp",
 			"recipientUsers": "perezdsharida@gmail.com",
 			"userInterfaceParams": [],
+			"customAttributes": [{
+				"id": "CustomNumberValue",
+				"label": "Items",
+				"type": "string",
+				"value": "${context.items}"
+			}, {
+				"id": "CustomTaskTitle",
+				"label": "Users",
+				"type": "string",
+				"value": "${context.users.userName}"
+			}, {
+				"id": "CustomCreatedBy",
+				"label": "Email",
+				"type": "string",
+				"value": "${context.users.email}"
+			}, {
+				"id": "CustomNumberUnitValue",
+				"label": "Item",
+				"type": "string",
+				"value": "Items"
+			}],
 			"id": "usertask1",
 			"name": "Solicitud de Compra."
 		},
@@ -165,6 +207,7 @@
 			"isHiddenInLogForParticipant": false,
 			"userInterface": "sapui5://sapcpwebapp/sap.cp.webapp",
 			"recipientUsers": "perezdsharida@gmail.com",
+			"customAttributes": [],
 			"id": "usertask2",
 			"name": "Solicitud de Reserva."
 		},
@@ -570,7 +613,7 @@
 			"name": "maildefinition4",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Reserva.",
-			"reference": "/webcontent/testWorkflow/mail.html",
+			"reference": "/webcontent/testWorkflow/mailReserve.html",
 			"id": "maildefinition4"
 		},
 		"0cd120b2-ec4c-463a-8749-a8dc960e6475": {
@@ -586,7 +629,7 @@
 			"name": "maildefinition6",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Reserva Aprobada.",
-			"text": "Aprobación de Solicitud de Reserva.",
+			"reference": "/webcontent/testWorkflow/approve.html",
 			"id": "maildefinition6"
 		}
 	}
