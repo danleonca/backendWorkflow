@@ -17,7 +17,7 @@
 		intro="Departamento: {/users/department}"
 		 >
 			<ObjectAttribute text="{/users/userName}"  />
-            <ObjectAttribute text="{/users/email}"  />
+            <ObjectAttribute text="{/users/email}" active="true" />
 			<ObjectAttribute text="{/task/CreatedOn}"  />
 			<ObjectAttribute text="{/task/Description}" />
 	</ObjectHeader>
@@ -38,6 +38,7 @@ id="gridList"
 					<Image src="{image}" width="3rem" class="sapUiSmallMarginEnd" />
 					<VBox>
 						<Title text="{name}" wrapping="true" />
+                        <Label text="Cantidad: 1" wrapping="true" />
                         <Label text="{parts:[{path: '/sType'},
                         {path:'price'}], formatter: '.formatter.price'}" wrapping="true" />
                       	
