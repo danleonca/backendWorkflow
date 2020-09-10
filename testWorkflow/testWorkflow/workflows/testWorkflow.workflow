@@ -547,7 +547,7 @@
 		"d7f0a337-a0da-4b0e-aa77-6a0f0b0b63c2": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition1",
-			"to": "shariperez97@gmail.com",
+			"to": "sap.pt.demo@gmail.com",
 			"subject": "Solicitud de Compra",
 			"reference": "/webcontent/testWorkflow/requestEmail.html",
 			"id": "maildefinition1"
@@ -555,7 +555,7 @@
 		"633984a2-aa58-4ffc-957c-310225d3d430": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition2",
-			"to": "shariperez97@gmail.com",
+			"to": "rebecacabrera297@gmail.com",
 			"subject": "Solicitud de Compra Rechazada.",
 			"reference": "/webcontent/testWorkflow/reject.html",
 			"id": "maildefinition2"
@@ -563,7 +563,7 @@
 		"1064d174-702e-487b-8830-d991c8fce927": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition3",
-			"to": "shariperez97@gmail.com",
+			"to": "rebecacabrera297@gmail.com",
 			"subject": "Solicitud de Compra Aprobada.",
 			"reference": "/webcontent/testWorkflow/approve.html",
 			"id": "maildefinition3"
@@ -571,7 +571,7 @@
 		"dde6b9b6-a39c-4e37-a9e0-1ed506f19006": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition4",
-			"to": "shariperez97@gmail.com",
+			"to": "sap.pt.demo@gmail.com",
 			"subject": "Solicitud de Reserva.",
 			"reference": "/webcontent/testWorkflow/requestEmail.html",
 			"id": "maildefinition4"
@@ -579,7 +579,7 @@
 		"0cd120b2-ec4c-463a-8749-a8dc960e6475": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition5",
-			"to": "shariperez97@gmail.com",
+			"to": "rebecacabrera297@gmail.com",
 			"subject": "Solicitud de Reserva Rechazada.",
 			"reference": "/webcontent/testWorkflow/reject.html",
 			"id": "maildefinition5"
@@ -587,7 +587,7 @@
 		"a449a778-3a12-4dc2-8fd5-d1e791f1838c": {
 			"classDefinition": "com.sap.bpm.wfs.MailDefinition",
 			"name": "maildefinition6",
-			"to": "shariperez97@gmail.com",
+			"to": "rebecacabrera297@gmail.com",
 			"subject": "Solicitud de Reserva Aprobada.",
 			"reference": "/webcontent/testWorkflow/approve.html",
 			"id": "maildefinition6"
