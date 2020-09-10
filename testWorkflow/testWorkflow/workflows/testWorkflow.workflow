@@ -4,27 +4,7 @@
 			"classDefinition": "com.sap.bpm.wfs.Model",
 			"id": "testWorkflow",
 			"subject": "testWorkflow",
-			"customAttributes": [{
-				"id": "CustomNumberValue",
-				"label": "Items",
-				"type": "string",
-				"value": "1"
-			}, {
-				"id": "CustomTaskTitle",
-				"label": "Name",
-				"type": "string",
-				"value": "${context.users.userName}"
-			}, {
-				"id": "CustomCreatedBy",
-				"label": "Email",
-				"type": "string",
-				"value": "${context.users.email}"
-			}, {
-				"id": "CustomNumberUnitValue",
-				"label": "Item",
-				"type": "string",
-				"value": "Items"
-			}],
+			"customAttributes": [],
 			"name": "testWorkflow",
 			"documentation": "",
 			"lastIds": "62d7f4ed-4063-4c44-af8b-39050bd44926",
@@ -146,27 +126,7 @@
 			"userInterface": "sapui5://sapcpwebapp/sap.cp.webapp",
 			"recipientUsers": "perezdsharida@gmail.com",
 			"userInterfaceParams": [],
-			"customAttributes": [{
-				"id": "CustomNumberValue",
-				"label": "Items",
-				"type": "string",
-				"value": "${context.items}"
-			}, {
-				"id": "CustomTaskTitle",
-				"label": "Users",
-				"type": "string",
-				"value": "${context.users.userName}"
-			}, {
-				"id": "CustomCreatedBy",
-				"label": "Email",
-				"type": "string",
-				"value": "${context.users.email}"
-			}, {
-				"id": "CustomNumberUnitValue",
-				"label": "Item",
-				"type": "string",
-				"value": "Items"
-			}],
+			"customAttributes": [],
 			"id": "usertask1",
 			"name": "Solicitud de Compra."
 		},
@@ -252,7 +212,7 @@
 		},
 		"b4af5d82-bf54-4809-b6f4-55b397678f9f": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
-			"condition": "${usertasks.usertask1.last.decision==\"rechazar\"}",
+			"condition": "${context.approved==\"No\"}",
 			"id": "sequenceflow5",
 			"name": "Rechazada",
 			"sourceRef": "08badbb6-e5a3-40c7-baf5-d1f6c924c4a3",
@@ -310,7 +270,7 @@
 		},
 		"1c8baf0c-7b4b-4bcf-84b0-3fb67504cf41": {
 			"classDefinition": "com.sap.bpm.wfs.SequenceFlow",
-			"condition": "${usertasks.usertask2.last.decision==\"rechazar\"}",
+			"condition": "${context.approved==\"No\"}",
 			"id": "sequenceflow15",
 			"name": "Rechazada",
 			"sourceRef": "ecaaa76a-efe9-4392-b580-3c982801c3e7",
@@ -589,7 +549,7 @@
 			"name": "maildefinition1",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Compra",
-			"text": "Solicitud de Compra",
+			"reference": "/webcontent/testWorkflow/requestEmail.html",
 			"id": "maildefinition1"
 		},
 		"633984a2-aa58-4ffc-957c-310225d3d430": {
@@ -597,7 +557,7 @@
 			"name": "maildefinition2",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Compra Rechazada.",
-			"text": "Tu solicitud de compra fue rechazada.",
+			"reference": "/webcontent/testWorkflow/reject.html",
 			"id": "maildefinition2"
 		},
 		"1064d174-702e-487b-8830-d991c8fce927": {
@@ -605,7 +565,7 @@
 			"name": "maildefinition3",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Compra Aprobada.",
-			"text": "Tu solicitud de inventario fue aprobada. ",
+			"reference": "/webcontent/testWorkflow/approve.html",
 			"id": "maildefinition3"
 		},
 		"dde6b9b6-a39c-4e37-a9e0-1ed506f19006": {
@@ -613,7 +573,7 @@
 			"name": "maildefinition4",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Reserva.",
-			"reference": "/webcontent/testWorkflow/mailReserve.html",
+			"reference": "/webcontent/testWorkflow/requestEmail.html",
 			"id": "maildefinition4"
 		},
 		"0cd120b2-ec4c-463a-8749-a8dc960e6475": {
@@ -621,7 +581,7 @@
 			"name": "maildefinition5",
 			"to": "shariperez97@gmail.com",
 			"subject": "Solicitud de Reserva Rechazada.",
-			"text": "Rechazo de Solicitud de Reserva.",
+			"reference": "/webcontent/testWorkflow/reject.html",
 			"id": "maildefinition5"
 		},
 		"a449a778-3a12-4dc2-8fd5-d1e791f1838c": {
