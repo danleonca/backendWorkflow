@@ -21,7 +21,7 @@ sap.ui.define([
             } if (name === "Alejandra Luna") {
                 sReturn = "/sapcpwebapp/images/imgM3.jpeg";
             } if (name === "Pedro Medina") {
-                sReturn = "/sapcpwebapp/images/imgH1.jpeg"
+                sReturn = "/sapcpwebapp/images/imgH1.jpeg";
             } if (name === "Ricardo Rosales") {
                 sReturn = "/sapcpwebapp/images/imgH2.jpeg";
             } if (name === "Octavio Lujan") {
@@ -31,6 +31,17 @@ sap.ui.define([
             // return sReturn to the view
             return sReturn;
 
+        },
+
+        price: function(demand, sPrice) {
+            var sWork= "";
+            if (demand=== "Compra"){
+                sWork= "Precio: "+ sPrice;
+            }
+            if(demand=== "Reserva") {
+                sWork="";
+            }
+            return sWork; 
         }
 
     };

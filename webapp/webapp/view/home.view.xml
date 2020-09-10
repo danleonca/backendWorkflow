@@ -5,8 +5,7 @@
 				<Page id="page" >
                     
 					<content>
-                    
-                    	<ObjectHeader
+                    <ObjectHeader
                         
                         
 		icon="{path: '/users/userName', formatter: '.formatter.picture'}"
@@ -22,6 +21,7 @@
 			<ObjectAttribute text="{/task/CreatedOn}"  />
 			<ObjectAttribute text="{/task/Description}" />
 	</ObjectHeader>
+                    	
         
 <f:GridList
 id="gridList"
@@ -38,7 +38,8 @@ id="gridList"
 					<Image src="{image}" width="3rem" class="sapUiSmallMarginEnd" />
 					<VBox>
 						<Title text="{name}" wrapping="true" />
-                        <Label text="Precio: {price}" wrapping="true" />
+                        <Label text="{parts:[{path: '/sType'},
+                        {path:'price'}], formatter: '.formatter.price'}" wrapping="true" />
                       	
                         
 					</VBox>

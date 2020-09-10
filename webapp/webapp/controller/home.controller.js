@@ -10,6 +10,7 @@ sap.ui.define([
 
 		return Controller.extend("sap.cp.webapp.controller.home", {
             formatter: formatter,
+        
             
 			onInit: function () {
                
